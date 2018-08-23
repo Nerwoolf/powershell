@@ -1,3 +1,2 @@
 # powershell
-powershell scripts
-test12
+Learning powershell scripts
