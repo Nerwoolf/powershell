@@ -12,18 +12,18 @@
         (
         # set first side
                 
-        [Int]$firstTriangSide,
+        [Int]$a,
 
         # set second side
-        [int]$secondTriangSide,
+        [int]$b,
 
         # set third sie
-        [int]$thirdTriangSide
+        [int]$c
     
         )
        
 # Check parameters for positive number
-    if($firstTriangSide,$secondTriangSide,$thirdTriangSide -le 0)
+    if($a,$b,$c -le 0 )
           {
                    
            Write-Host "Sides should not to be less or equal 0"
@@ -34,16 +34,20 @@
 
 # Main program logic 
 # Check for equilateral Triangle   
-    if ($firstTriangSide -eq $secondTriangSide -and $secondTriangSide -eq $thirdTriangSide)
+    if ($a -eq $b -and $b -eq $c)
         {
             Write-host "Triangle is equilateral "
         }
 # Check for isoceles Triangle
-    elseif(($firstTriangSide -eq $secondTriangSide) -or ($firstTriangSide -eq $thirdTriangSide) -or ($secondTriangSide -eq $thirdTriangSide))
+    elseif(($a -eq $b) -or ($a -eq $c) -or ($b -eq $c))
     {
         Write-Host "Triangle is isosceles"
     }
-
+    elseif((($b+$c) -lt $a) -or (($a+$c) -lt $b)`
+    -or (($a+$b)) -lt $c)
+    {
+        Write-Host "it’s not a triangle"
+    }
 # if other False Versatile Triangle
     else
     {
