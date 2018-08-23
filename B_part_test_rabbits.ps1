@@ -44,7 +44,7 @@ do
 
             { 
                 # Wolf came
-                if(($monthNumber -ge 6) -and ($i%6 -eq 0))
+                if(($i -ge 6) -and ($i%6 -eq 0))
                 {
                    
                     $oldRabbit = $oldRabbit/2

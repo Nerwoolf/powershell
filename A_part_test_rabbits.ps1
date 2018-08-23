@@ -40,7 +40,7 @@ do
     }
     
 
-        
+        # Fib increase 
             for ($i = 0; $i -lt $monthNumber; $i++)
 
             { 
