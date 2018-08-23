@@ -10,8 +10,7 @@
 #>
 
 # Define variables
-
-$resultRabbitsNumber
+$resultRabbitsNumber = 0
 $monthNumber = 0
 $smallRabbit = 0
 $oldRabbit = 2
@@ -45,22 +44,16 @@ do
 
             { 
                 
-                
+                if(($monthNumber -ge 6) -and ($tempMonth%6 -eq 0) -and ($i%7 -eq 0))
+                {
+                   
+                    $oldRabbit = $oldRabbit/2
+              
+                }
                  $resultRabbitsNumber = $oldRabbit +$smallRabbit
                  $smallRabbit = $oldRabbit
                  $oldRabbit = $resultRabbitsNumber
-                 if(($monthNumber -ge 6 -and $tempMonth%6 -eq 0) -and $i%6 -eq 0)
-                 {
-                    Write-Output -InputObject $oldRabbit  
-                    Write-Host "Old before wolf" 
-                 Write-Output -InputObject $smallRabbit 
-                 Write-Host "small before" 
-                     $oldRabbit = $oldRabbit/2
-                  Write-Output -InputObject $oldRabbit 
-                  Write-Host 'old after'  
-                   Write-Output -InputObject $smallRabbit 
-                   Write-Host 'small after' 
-                 }
+              
                  
             }
         
