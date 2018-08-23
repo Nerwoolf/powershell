@@ -39,12 +39,12 @@ do
     }
     
 
-        
+        # Fib increase
             for ($i = 1; $i -le $monthNumber; $i++)
 
             { 
-                
-                if(($monthNumber -ge 6) -and ($tempMonth%6 -eq 0) -and ($i%7 -eq 0))
+                # Wolf came
+                if(($monthNumber -ge 6) -and ($i%6 -eq 0))
                 {
                    
                     $oldRabbit = $oldRabbit/2
@@ -64,4 +64,4 @@ do
 
 }
 until ($monthNumber -gt 0)
-#Start-Sleep 5  
+Start-Sleep 5  
